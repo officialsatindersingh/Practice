@@ -1,0 +1,28 @@
+{
+	"name": "orders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "zalphaSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "orderid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "orderamount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "orders"
+		}
+	}
+}

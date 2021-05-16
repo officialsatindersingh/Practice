@@ -1,0 +1,28 @@
+{
+	"name": "sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "zalphaSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "salesid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "salesamount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sales"
+		}
+	}
+}
