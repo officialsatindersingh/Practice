@@ -1,0 +1,53 @@
+{
+	"name": "metainfo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "zalphaSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "storagecontainer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "storagefolder",
+				"type": "nvarchar"
+			},
+			{
+				"name": "storageblob",
+				"type": "nvarchar"
+			},
+			{
+				"name": "dlscontainer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "dlsfolder",
+				"type": "nvarchar"
+			},
+			{
+				"name": "dlsblob",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sqldb",
+				"type": "nvarchar"
+			},
+			{
+				"name": "schemaname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tablename",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "metainfo"
+		}
+	}
+}
