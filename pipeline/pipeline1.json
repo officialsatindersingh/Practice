@@ -47,10 +47,17 @@
 					},
 					"activities": [
 						{
-							"name": "Set variable1",
+							"name": "Set storage container",
 							"type": "SetVariable",
 							"dependsOn": [],
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "storagecontainer",
+								"value": {
+									"value": "@activity('getmetainfo').output.value.storagecontainer",
+									"type": "Expression"
+								}
+							}
 						}
 					]
 				}
