@@ -58,6 +58,110 @@
 									"type": "Expression"
 								}
 							}
+						},
+						{
+							"name": "Set storagefolder",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "storagefolder",
+								"value": {
+									"value": "@item().storagefolder",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set storageblob",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "storageblob",
+								"value": {
+									"value": "@item().storageblob",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set dlscontainer",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "dlscontainer",
+								"value": {
+									"value": "@item().dlscontainer",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set dlsfolder",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "dlsfolder",
+								"value": {
+									"value": "@item().dlsfolder",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set dlsblob",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "dlsblob",
+								"value": {
+									"value": "@item().dlsblob",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set sqldb",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "sqldb",
+								"value": {
+									"value": "@item().sqldb",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set schemaname",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "schemaname",
+								"value": {
+									"value": "@item().schemaname",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set tablename",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "tablename",
+								"value": {
+									"value": "@item().tablename",
+									"type": "Expression"
+								}
+							}
 						}
 					]
 				}
