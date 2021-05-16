@@ -45,6 +45,7 @@
 						"value": "@activity('getmetainfo').output.value",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Set storage container",
