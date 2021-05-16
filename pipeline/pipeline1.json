@@ -243,7 +243,15 @@
 									}
 								},
 								"sink": {
-									"type": "AzureSqlSink"
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
 								},
 								"enableStaging": false,
 								"translator": {
@@ -277,8 +285,22 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "customer",
-									"type": "DatasetReference"
+									"referenceName": "ADLS_customercsv",
+									"type": "DatasetReference",
+									"parameters": {
+										"container": {
+											"value": "@variables('dlscontainer')",
+											"type": "Expression"
+										},
+										"folder": {
+											"value": "@variables('dlsfolder')",
+											"type": "Expression"
+										},
+										"blob": {
+											"value": "@variables('dlsblob')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
