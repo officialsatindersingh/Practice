@@ -39,23 +39,7 @@
 						]
 					}
 				],
-				"userProperties": [],
-				"typeProperties": {
-					"activities": [
-						{
-							"name": "Set storagecontainer",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": []
-						},
-						{
-							"name": "Set variable2",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": []
-						}
-					]
-				}
+				"userProperties": []
 			}
 		],
 		"parameters": {
