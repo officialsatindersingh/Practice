@@ -5,26 +5,26 @@
 			"referenceName": "zalphaSqlDatabase",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"schemaname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [
-			{
-				"name": "customerid",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "customername",
-				"type": "nvarchar"
-			},
-			{
-				"name": "customerlocation",
-				"type": "nvarchar"
-			}
-		],
+		"schema": [],
 		"typeProperties": {
-			"schema": "dbo",
-			"table": "customer"
+			"schema": {
+				"value": "@dataset().schemaname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
 		}
 	}
 }
