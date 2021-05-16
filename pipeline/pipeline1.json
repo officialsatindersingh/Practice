@@ -54,7 +54,7 @@
 							"typeProperties": {
 								"variableName": "storagecontainer",
 								"value": {
-									"value": "@{activity('getmetainfo').output.value.storagecontainer}",
+									"value": "@{activity('getmetainfo').output.value}",
 									"type": "Expression"
 								}
 							}
