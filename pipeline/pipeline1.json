@@ -39,7 +39,21 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('getmetainfo').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": []
+						}
+					]
+				}
 			}
 		],
 		"parameters": {
