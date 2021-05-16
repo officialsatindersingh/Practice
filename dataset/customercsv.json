@@ -5,6 +5,17 @@
 			"referenceName": "AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"container": {
+				"type": "string"
+			},
+			"folder": {
+				"type": "string"
+			},
+			"blob": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
