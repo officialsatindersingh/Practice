@@ -244,14 +244,12 @@
 									}
 								},
 								"sink": {
-									"type": "DelimitedTextSink",
+									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"type": "ParquetWriteSettings"
 									}
 								},
 								"enableStaging": false,
@@ -286,7 +284,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ADLS_customercsv",
+									"referenceName": "customerparquet",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": {
@@ -299,135 +297,6 @@
 										},
 										"blob": {
 											"value": "@variables('dlsblob')",
-											"type": "Expression"
-										}
-									}
-								}
-							]
-						},
-						{
-							"name": "Copy data to SQL",
-							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "Set storage container",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set storagefolder",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set storageblob",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set dlscontainer",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set dlsfolder",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set dlsblob",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set sqldb",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set schemaname",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "Set tablename",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
-							"policy": {
-								"timeout": "7.00:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": [],
-							"typeProperties": {
-								"source": {
-									"type": "DelimitedTextSource",
-									"storeSettings": {
-										"type": "AzureBlobStorageReadSettings",
-										"recursive": true,
-										"enablePartitionDiscovery": false
-									},
-									"formatSettings": {
-										"type": "DelimitedTextReadSettings"
-									}
-								},
-								"sink": {
-									"type": "AzureSqlSink"
-								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
-							},
-							"inputs": [
-								{
-									"referenceName": "customercsv",
-									"type": "DatasetReference",
-									"parameters": {
-										"container": {
-											"value": "@variables('storagecontainer')",
-											"type": "Expression"
-										},
-										"folder": {
-											"value": "@variables('storagefolder')",
-											"type": "Expression"
-										},
-										"blob": {
-											"value": "@variables('storageblob')",
-											"type": "Expression"
-										}
-									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "customer",
-									"type": "DatasetReference",
-									"parameters": {
-										"schemaname": {
-											"value": "@variables('schemaname')",
-											"type": "Expression"
-										},
-										"tablename": {
-											"value": "@variables('tablename')",
 											"type": "Expression"
 										}
 									}
