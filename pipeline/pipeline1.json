@@ -56,33 +56,33 @@
 				}
 			}
 		],
-		"parameters": {
+		"variables": {
 			"storagecontainer": {
-				"type": "string"
+				"type": "String"
 			},
 			"storagefolder": {
-				"type": "string"
+				"type": "String"
 			},
 			"storageblob": {
-				"type": "string"
+				"type": "String"
 			},
 			"dlscontainer": {
-				"type": "string"
+				"type": "String"
 			},
 			"dlsfolder": {
-				"type": "string"
+				"type": "String"
 			},
 			"dlsblob": {
-				"type": "string"
+				"type": "String"
 			},
 			"sqldb": {
-				"type": "string"
+				"type": "String"
 			},
 			"schemaname": {
-				"type": "string"
+				"type": "String"
 			},
 			"tablename": {
-				"type": "string"
+				"type": "String"
 			}
 		},
 		"annotations": []
