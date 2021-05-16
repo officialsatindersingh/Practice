@@ -1,6 +1,35 @@
 {
 	"name": "pipeline1",
 	"properties": {
+		"parameters": {
+			"storagecontainer": {
+				"type": "string"
+			},
+			"storagefolder": {
+				"type": "string"
+			},
+			"storageblob": {
+				"type": "string"
+			},
+			"dlscontainer": {
+				"type": "string"
+			},
+			"dlsfolder": {
+				"type": "string"
+			},
+			"dlsblob": {
+				"type": "string"
+			},
+			"sqldb": {
+				"type": "string"
+			},
+			"schemaname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
